@@ -5,6 +5,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'sass'
 gem 'jquery-rails'
+gem "compass", ">= 0.11.5"
 
 gem 'sqlite3'
 
