@@ -1,3 +1,35 @@
-body {
-  background: #ccffcc;
-  margin: 0; }
+/* line 7, sass/application.sass */
+#wrapper {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 10, sass/application.sass */
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+/* line 14, sass/application.sass */
+li {
+  padding: 10px;
+}
+/* line 17, sass/application.sass */
+li .post_title {
+  font-size: 2em;
+  margin-right: 20px;
+}
+/* line 21, sass/application.sass */
+li .post_description {
+  display: block;
+  width: 100%;
+}
+
+/* line 26, sass/application.sass */
+.new_post_link {
+  float: right;
+  font-weight: bold;
+  font-size: 1.4em;
+}

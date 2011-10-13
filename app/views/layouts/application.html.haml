@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-  %title Blog
+  %title mewie.com blog
   = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
   = stylesheet_link_tag 'print.css', :media => 'print'
   /[if lt IE 8]
@@ -11,5 +11,9 @@
   = csrf_meta_tag 
 
   %body
-  = yield 
+    #wrapper
+      #header
+      %h1#logo
+        mewie.com blog
+      = yield 
 

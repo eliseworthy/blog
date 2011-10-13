@@ -1,3 +1,29 @@
-body
-  background: #CFC
-  margin: 0
+$blueprint-grid-column : 24
+$blueprint-grid-width : 30px
+$blueprint-grid-margin : 10px
+
+@import blueprint
+
+#wrapper
+  +container
+
+h1
+  font-size: 3em
+  font-weight: bold
+
+li
+  padding: 10px   
+
+  .post_title
+    font-size: 2.0em
+    margin-right: 20px
+
+  .post_description
+    display: block
+       
+    width: 100%
+
+.new_post_link
+  float: right
+  font-weight: bold
+  font-size: 1.4em

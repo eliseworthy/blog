@@ -1,23 +1,13 @@
-%h1 Listing posts
+= link_to 'New Post', new_post_path, :class => "new_post_link"
 
-%table
-  %tr
-    %th Title
-    %th Content
-    %th Post time
-    %th
-    %th
-    %th
-
+%ul
   - @posts.each do |post|
-    %tr
-      %td= post.title
-      %td= post.content
-      %td= post.post_time
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
+    %li
+      %strong.post_title
+        = post.title
+      %span.post_description
+        = truncate post.content, :length => 900
+      = post.post_time
+      = link_to 'Show', post
+      = link_to 'Edit', edit_post_path(post)
 
-%br
-
-= link_to 'New Post', new_post_path
