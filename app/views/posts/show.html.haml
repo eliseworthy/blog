@@ -1,14 +1,13 @@
 %p#notice= notice
 
-%p
-  %b Title:
-  = @post.title
-%p
-  %b Content:
-  = @post.content
-%p
-  %b Post time:
-  = @post.post_time
+.post_show
+
+  .post_title
+    = @post.title
+  .post_time
+    = @post.post_time
+  .post_content
+    = @post.content
 
 = link_to 'Edit', edit_post_path(@post)
 \|

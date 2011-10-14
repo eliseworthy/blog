@@ -1,13 +1,14 @@
+
 = link_to 'New Post', new_post_path, :class => "new_post_link"
 
 %ul
   - @posts.each do |post|
     %li
-      %strong.post_title
+      %strong.index_title
         = post.title
+      = post.post_time
       %span.post_description
         = truncate post.content, :length => 900
-      = post.post_time
       = link_to 'Show', post
       = link_to 'Edit', edit_post_path(post)
 

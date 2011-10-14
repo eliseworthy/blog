@@ -17,19 +17,48 @@ li {
   padding: 10px;
 }
 /* line 17, sass/application.sass */
-li .post_title {
-  font-size: 2em;
-  margin-right: 20px;
-}
-/* line 21, sass/application.sass */
 li .post_description {
   display: block;
-  width: 100%;
+  width: 80%;
 }
 
-/* line 26, sass/application.sass */
+/* line 21, sass/application.sass */
 .new_post_link {
   float: right;
   font-weight: bold;
   font-size: 1.4em;
+}
+
+/* line 26, sass/application.sass */
+.index_title {
+  font-size: 2em;
+  margin-right: 20px;
+  width: 80%;
+  display: block;
+  word-wrap: break-word;
+}
+
+/* line 33, sass/application.sass */
+.post_content {
+  display: block;
+  width: 100%;
+}
+
+/* line 39, sass/application.sass */
+.post_show .post_title {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-right: 20px;
+  display: block;
+  margin-top: 20px;
+}
+/* line 47, sass/application.sass */
+.post_show .post_time {
+  margin-bottom: 10px;
+}
+/* line 50, sass/application.sass */
+.post_show .post_content {
+  display: block;
+  width: 100%;
+  font-size: 1.1em;
 }
