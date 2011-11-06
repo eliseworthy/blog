@@ -2,6 +2,7 @@
 %html
   %head
   %title mewie.com blog
+  = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Allerta', :rel => 'stylesheet', :type => 'text/css'
   = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
   = stylesheet_link_tag 'print.css', :media => 'print'
   /[if lt IE 8]
@@ -23,5 +24,6 @@
           = link_to "sign out", sign_out_url
         -  else
           = link_to "sign in", sign_in_url
+    #content
       = yield 
 
