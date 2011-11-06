@@ -1,5 +1,14 @@
-Blog::Application.routes.draw do
+Blog::Application.routes.draw do      
+  
+  get "admin_sessions/new"
+
+  resource :admin_session
+  resources :admins
   resources :posts
+  
+  match "/register" => "admins#new", :as => :register
+  match "/sign-in" => "admin_sessions#new", :as => :sign_in
+  match "/sign-out" => "admin_sessions#destroy", :as => :sign_out
 
   root :to => 'posts#index'
   

@@ -1,0 +1,18 @@
+%h2 Sign In
+
+= form_for @admin_session, :url => admin_session_path do |f|
+  -if @admin_session.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@admin_session.errors.count, "error")} prohibited this admin from being saved:"
+      %ul
+        - @admin_session.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :password
+    = f.password_field :password
+  .field
+    = f.submit 'Submit'

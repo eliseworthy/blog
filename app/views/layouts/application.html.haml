@@ -11,9 +11,17 @@
   = csrf_meta_tag 
 
   %body
-    #wrapper
+    #wrapper		
       #header
       %h1#logo
         mewie.com blog
+      %p.notice= flash[:notice]
+      #admin_bar 
+        - if current_admin
+          signed in as #{current_admin.name} 
+          | 
+          = link_to "sign out", sign_out_url
+        -  else
+          = link_to "sign in", sign_in_url
       = yield 
 
