@@ -14,4 +14,11 @@ class ApplicationController < ActionController::Base
     return @current_admin if defined?(@current_admin)
     @current_admin = current_admin_session && current_admin_session.admin
   end   
+  
+  def require_current_admin
+    unless current_admin
+     flash[:error] = 'You must be logged in.' 
+      redirect_to root_path
+    end  
+  end  
 end

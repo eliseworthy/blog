@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_filter :require_current_admin, :except => [:index, :show]
   # GET /posts
   # GET /posts.xml
   def index

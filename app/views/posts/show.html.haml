@@ -10,6 +10,12 @@
   .post_time
     Posted on:
     = @post.post_time
+
+  - if @post.admin
+    .admin
+      Posted by:
+      = link_to @post.admin.name, @post.admin  
+
   .post_content
     = @post.content
 

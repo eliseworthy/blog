@@ -17,6 +17,7 @@
       %h1#logo
         mewie.com blog
       %p.notice= flash[:notice]
+      %p.error= flash[:error]
       #admin_bar 
         - if current_admin
           signed in as #{current_admin.name} 
